@@ -1,125 +1,156 @@
-# StarkPulse Contract ⚡🔒
 
-StarkPulse is a cutting-edge, decentralized crypto news aggregator and portfolio management platform built on the StarkNet ecosystem. This repository contains the smart contract code that powers the StarkPulse platform.
+# Arcana
 
-## Overview
+**Unlock Your Financial Realm**
 
-The StarkPulse contract provides the backbone for secure user authentication, portfolio tracking, transaction monitoring, and decentralized data management. Built with Cairo, it leverages StarkNet's scalability and security to deliver a robust foundation for the StarkPulse ecosystem.
+A futuristic personal finance and instant global payment platform built on the **Stellar blockchain**.
 
-## Key Features
+Arcana transforms your digital identity into a powerful **3D holographic financial profile** — combining wallet, credit reputation, payment terminal, and personal financial realm into one seamless experience.
 
-- **Secure User Authentication 🔐**: Robust user management with password hashing and session control
-- **Portfolio Tracking System 📊**: Track and manage crypto assets with real-time updates
-- **Transaction Monitoring 🔍**: Comprehensive transaction history and status tracking
-- **Notification Management 📱**: Real-time alerts for important portfolio events
-- **Access Control System 🛡️**: Fine-grained permissions and security controls
-- **Contract Interaction Utilities 🔄**: Seamless integration with other StarkNet contracts
+---
 
-## Tech Stack
+## ✨ Overview
 
-- **Cairo 2.x**: StarkNet's secure smart contract language
-- **Scarb**: Package manager for Cairo projects
-- **StarkNet**: Layer 2 scaling solution for Ethereum
+Arcana enables instant, borderless payments and financial interactions using beautiful AR-enhanced 3D profiles. Send money by pointing your camera, split bills in shared holographic spaces, and build your financial reputation through an on-chain **Arcana Score**.
 
-## Project Structure
+Built as a **Turborepo** monorepo for maximum developer experience and scalability.
 
+---
+
+## 🚀 Key Features
+
+- **Arcana Profile** — Living 3D/AR holographic financial identity
+- **Realm Send** — Instant payments using profile names or AR scanning
+- **AR Instant Pay** — Point-and-pay with immersive visual effects
+- **Arcana Score** — Dynamic on-chain reputation and credit scoring system
+- **Arcana Loans** — Borrow and lend using profile reputation as collateral
+- **Multi-currency Support** — Seamless stablecoin conversions
+- **Shared Realms** — Group expenses with 3D visualizations
+- **Financial Fate** — AI-powered financial insights
+
+---
+
+## 🛠 Tech Stack
+
+- **Blockchain**: Stellar Network + **Soroban** Smart Contracts
+- **Frontend**: Next.js 15 (App Router) + TypeScript + TailwindCSS
+- **3D & AR**: React Three Fiber, Three.js, 8th Wall
+- **Backend**: NestJS / Express
+- **Monorepo**: Turborepo + pnpm
+- **Database**: PostgreSQL + Prisma
+- **State Management**: Zustand + TanStack Query
+
+---
+
+## 📁 Project Structure
+
+```bash
+arcana/
+├── apps/
+│   ├── web/                    # Next.js web application (frontend)
+│   ├── mobile/                 # React Native / Expo app (future)
+│   └── docs/                   # Documentation site
+├── backend/                    # Backend services (NestJS / Express)
+│   ├── src/
+│   ├── prisma/
+│   └── package.json
+├── soroban/                    # Soroban smart contracts
+│   ├── contracts/              # Individual smart contracts
+│   ├── scripts/                # Deployment & testing scripts
+│   └── package.json
+├── packages/
+│   ├── ui/                     # Shared UI components + 3D components
+│   ├── core/                   # Core business logic & utilities
+│   ├── stellar/                # Stellar & Soroban integration layer
+│   ├── types/                  # Shared TypeScript types
+│   ├── hooks/                  # Shared React hooks
+│   └── config/                 # Shared configs (ESLint, TS, Tailwind)
+├── tools/                      # Internal tooling and scripts
+├── turbo.json
+├── pnpm-workspace.yaml
+├── .env.example
+└── README.md
 ```
-contracts/
- ├── src/
- │   ├── auth/ - User authentication and session management
- │   ├── portfolio/ - Portfolio tracking and asset management
- │   ├── transactions/ - Transaction monitoring and notifications
- │   ├── utils/ - Utility functions and access control
- │   └── interfaces/ - Contract interfaces
- ├── tests/ - Test files for all modules
- ├── scripts/ - Deployment and verification scripts
- ├── deployments/ - Deployment addresses for different networks
- ├── abis/ - Contract ABIs
- ├── Scarb.toml - Project configuration
- └── README.md - Project documentation
-```
 
-## Getting Started
+---
+
+## 🏁 Quick Start
 
 ### Prerequisites
-
-- [Scarb](https://docs.swmansion.com/scarb/) - Cairo package manager
-- [StarkNet CLI](https://www.cairo-lang.org/docs/hello_starknet/index.html#installation) - For deploying contracts
+- Node.js 20+
+- pnpm 9+
+- Rust (for Soroban contract development)
+- Stellar CLI (`stellar-cli`)
 
 ### Installation
 
-1. Clone the repository:
-
 ```bash
-git clone https://github.com/Pulsefy/starkpulse-contract.git
-cd starkpulse-contract
+# Clone the repository
+git clone https://github.com/yourorg/arcana.git
+cd arcana
+
+# Install dependencies
+pnpm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Start development servers
+pnpm dev
 ```
 
-2. Build the contracts:
+### Available Scripts
 
 ```bash
-scarb build
+pnpm dev          # Start all apps (web + backend)
+pnpm build        # Build entire workspace
+pnpm lint         # Lint all packages
+pnpm test         # Run tests
+pnpm soroban:build   # Build Soroban contracts
+pnpm backend:dev     # Start only backend
 ```
 
-3. Run tests:
+---
 
-```bash
-scarb test
-```
+## 🧩 Architecture
 
-### Deployment
+- **Frontend (`apps/web`)**: 3D/AR interface and user experience
+- **Backend (`backend`)**: API layer, user management, off-chain logic, notifications
+- **Soroban (`soroban`)**: On-chain logic including loans, reputation updates, escrow, and profile verification
+- **Packages**: Reusable libraries shared across frontend, backend, and contracts
 
-Use the deployment scripts in the `scripts/` directory:
+---
 
-```bash
-./scripts/deploy.sh
-```
+## 🌌 Roadmap
 
-## Connecting to Frontend
+- **Phase 1 (MVP)**: Core payments, Arcana Profile, basic Arcana Score
+- **Phase 2**: AR payments, Soroban-powered loans, Shared Realms
+- **Phase 3**: Mobile app, AI insights, advanced reputation system
+- **Phase 4**: Cross-chain support and institutional features
 
-This contract repository powers the StarkPulse frontend application. See the [frontend repository](https://github.com/Pulsefy/Starkpulse) for integration details and setup instructions.
+---
 
-## Contributing
+## 🤝 Contributing
 
-We welcome contributions to StarkPulse! Please follow these steps:
+We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) first.
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add some amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+---
 
-## Maintainers
+## 📄 License
 
-- Divineifed1 👨‍💻
-- Cedarich 👨‍💻
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-Built with ❤️ by the StarkPulse Team
+---
 
-## Simulation & Scenario Testing Utilities
+## 🔗 Links
 
-The StarkPulse contract suite includes advanced simulation tools for pre-deployment testing and contract interaction analysis. These utilities are located in `contracts/src/simulation/` and provide:
+- [Documentation](https://docs.arcana.finance)
+- [Stellar Network](https://stellar.org)
+- [Soroban Documentation](https://soroban.stellar.org)
 
-- **Transaction Simulation:** Emulate contract calls and predict outcomes before actual execution.
-- **State Manipulation:** Take and restore contract state snapshots, or set state for testing.
-- **Scenario Orchestration:** Define and run sequences of contract interactions to validate complex workflows.
-- **Result Analysis & Reporting:** Capture events, estimate gas, and generate detailed simulation reports.
+---
 
-### Usage Example
+**Made with passion for the future of finance.**
 
-1. **Simulate a Transaction**
+---
 
-   - Use `simulate_transaction_full` from `transaction_simulator.cairo` to emulate a contract call and get a detailed report.
-
-2. **Manipulate State**
-
-   - Use `state_manipulator.cairo` to snapshot, restore, or set contract state for comprehensive scenario coverage.
-
-3. **Run a Scenario**
-
-   - Use `scenario_runner.cairo` to define a sequence of contract calls and analyze the results for all steps.
-
-4. **View Reports**
-   - Simulation reports include transaction results, events, and gas usage for easy debugging and optimization.
-
-See the `contracts/src/simulation/` directory and test files for more detailed examples and integration patterns.
