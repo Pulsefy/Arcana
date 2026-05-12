@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+build/
+dist/
+**/build/
+**/dist/
+
+# Test and coverage
+coverage/
+**/coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Runtime files
+*.pid
+*.pid.lock
+
+# Cache and temp
+.cache/
+**/.cache/
+.tmp/
+tmp/
+*.tsbuildinfo
+
+# Framework/tooling artifacts
+**/.next/
+**/.vite/
+**/.turbo/
+**/.parcel-cache/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
