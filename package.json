@@ -1,0 +1,9 @@
+{
+  "name": "arcana-workspace",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "apps/*",
+    "packages/*"
+  ]
+}
