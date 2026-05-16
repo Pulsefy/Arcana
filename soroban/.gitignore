@@ -1,0 +1,27 @@
+# Soroban Rust project
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+
+# Build artifacts
+*.wasm
+*.so
+*.dll
+*.dylib
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

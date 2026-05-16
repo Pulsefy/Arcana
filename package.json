@@ -4,6 +4,7 @@
   "workspaces": [
     "backend",
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "soroban"
   ]
 }

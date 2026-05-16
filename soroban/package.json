@@ -1,0 +1,14 @@
+{
+  "name": "arcana-soroban",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cargo build --release",
+    "test": "cargo test",
+    "deploy:testnet": "./scripts/deploy.sh",
+    "clean": "cargo clean"
+  },
+  "dependencies": {
+    "@arcana/types": "file:../packages/types"
+  }
+}

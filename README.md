@@ -32,7 +32,7 @@ Built as a **Turborepo** monorepo for maximum developer experience and scalabili
 
 ## 🛠 Tech Stack
 
-- **Blockchain**: Stellar Network + **Soroban** Smart Contracts
+- **Blockchain**: Stellar Network + **Soroban** Smart Contracts (Rust)
 - **Frontend**: Next.js 15 (App Router) + TypeScript + TailwindCSS
 - **3D & AR**: React Three Fiber, Three.js, 8th Wall
 - **Backend**: NestJS / Express
@@ -54,10 +54,12 @@ arcana/
 │   ├── src/
 │   ├── prisma/
 │   └── package.json
-├── soroban/                    # Soroban smart contracts
-│   ├── contracts/              # Individual smart contracts
+├── soroban/                    # Soroban smart contracts (Rust)
+│   ├── src/                    # Soroban contract source code
 │   ├── scripts/                # Deployment & testing scripts
-│   └── package.json
+│   ├── tests/                  # Contract tests
+│   ├── Cargo.toml              # Soroban project configuration
+│   └── package.json            # Turborepo integration
 ├── packages/
 │   ├── ui/                     # Shared UI components + 3D components
 │   ├── core/                   # Core business logic & utilities
@@ -107,6 +109,7 @@ pnpm build        # Build entire workspace
 pnpm lint         # Lint all packages
 pnpm test         # Run tests
 pnpm soroban:build   # Build Soroban contracts
+pnpm soroban:test    # Run Soroban contract tests
 pnpm backend:dev     # Start only backend
 ```
 
@@ -116,7 +119,7 @@ pnpm backend:dev     # Start only backend
 
 - **Frontend (`apps/web`)**: 3D/AR interface and user experience
 - **Backend (`backend`)**: API layer, user management, off-chain logic, notifications
-- **Soroban (`soroban`)**: On-chain logic including loans, reputation updates, escrow, and profile verification
+- **Soroban (`soroban`)**: On-chain logic including Arcana Profile, Arcana Score, Realm Send, and financial reputation system
 - **Packages**: Reusable libraries shared across frontend, backend, and contracts
 
 ---

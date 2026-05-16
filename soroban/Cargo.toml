@@ -1,0 +1,22 @@
+[package]
+name = "arcana-contract"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+doc = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+soroban-sdk = { git = "https://github.com/stellar/rs-soroban-sdk", rev = "main" }
+
+[dev-dependencies]
+soroban-sdk = { git = "https://github.com/stellar/rs-soroban-sdk", rev = "main", features = ["testutils"] }
+
+[[bin]]
+name = "arcana-contract"
+path = "src/lib.rs"
+
+[profile.release]
+overflow-checks = true
